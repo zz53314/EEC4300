@@ -1,0 +1,114 @@
+{
+  "run_id": "improved_smoke_33550336",
+  "llm_name": "OpenAI(deepseek-chat)",
+  "n_samples": 1,
+  "n_queries_per_sample": 1,
+  "query_multiplier": null,
+  "query_mode": "fixed",
+  "seed": 33550336,
+  "max_retries": 1,
+  "timestamp": "2026-11-23T18:37:11.827007",
+  "statistics": {
+    "valid_rate": {
+      "mean": 1.0,
+      "std": 0.0,
+      "var": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p_value": null
+    },
+    "novelty_rate": {
+      "mean": 1.0,
+      "std": 0.0,
+      "var": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "p_value": null
+    },
+    "recovery_rate": {
+      "mean": 0.5,
+      "std": 0.0,
+      "var": 0.0,
+      "min": 0.5,
+      "max": 0.5,
+      "p_value": null
+    }
+  },
+  "token_usage": {
+    "prompt_tokens": 573,
+    "completion_tokens": 5,
+    "total_tokens": 578,
+    "avg_tokens_per_sample": 578.0,
+    "avg_tokens_per_query": 578.0
+  },
+  "cost": {
+    "total_cost": 0.0,
+    "avg_cost_per_sample": 0.0,
+    "avg_cost_per_query": 0.0
+  },
+  "error_summary": {
+    "total_errors": 0,
+    "error_types": {},
+    "error_rate": 0.0
+  },
+  "per_sample_results": [
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 1,
+      "n_valid": 1,
+      "n_unique_valid": 1,
+      "n_unique_all": 1,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 1.0,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 573,
+        "completion_tokens": 5,
+        "total_tokens": 578
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        }
+      ]
+    }
+  ],
+  "method": "improved",
+  "method_details": "Only valid, in-space, structurally unique candidates are fed back; candidate diagnostics use visible observations and constraints only.",
+  "run_complete": true
+}

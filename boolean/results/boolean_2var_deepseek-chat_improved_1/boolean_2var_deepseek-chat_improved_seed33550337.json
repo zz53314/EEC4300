@@ -1,0 +1,5062 @@
+{
+  "run_id": "improved_seed33550337",
+  "llm_name": "OpenAI(deepseek-chat)",
+  "n_samples": 30,
+  "n_queries_per_sample": 10,
+  "query_multiplier": null,
+  "query_mode": "fixed",
+  "seed": 33550337,
+  "max_retries": 1,
+  "timestamp": "2026-11-23T18:52:18.457323",
+  "statistics": {
+    "valid_rate": {
+      "mean": 0.7033333333333334,
+      "std": 0.24830536755284927,
+      "var": 0.061655555555555575,
+      "min": 0.2,
+      "max": 1.0,
+      "p_value": 2.1777726833751203e-15
+    },
+    "novelty_rate": {
+      "mean": 0.3933333333333334,
+      "std": 0.11527744310527055,
+      "var": 0.01328888888888889,
+      "min": 0.2,
+      "max": 0.8,
+      "p_value": 1.611748227824364e-17
+    },
+    "recovery_rate": {
+      "mean": 0.7466666666666667,
+      "std": 0.24953289696283865,
+      "var": 0.06226666666666665,
+      "min": 0.2,
+      "max": 1.0,
+      "p_value": 5.220616075398716e-16
+    }
+  },
+  "token_usage": {
+    "prompt_tokens": 174775,
+    "completion_tokens": 3178,
+    "total_tokens": 177953,
+    "avg_tokens_per_sample": 5931.766666666666,
+    "avg_tokens_per_query": 593.1766666666666
+  },
+  "cost": {
+    "total_cost": 0.0,
+    "avg_cost_per_sample": 0.0,
+    "avg_cost_per_query": 0.0
+  },
+  "error_summary": {
+    "total_errors": 0,
+    "error_types": {},
+    "error_rate": 0.0
+  },
+  "per_sample_results": [
+    {
+      "observation_set_id": "n2_inputs_10_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 4,
+      "n_unique_valid": 1,
+      "n_unique_all": 3,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.4,
+      "novelty_rate": 0.3,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x",
+        "x AND (x OR y)",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x",
+        "x AND y",
+        "x",
+        "x AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x",
+        "x AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5681,
+        "completion_tokens": 50,
+        "total_tokens": 5731
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=1, y=0) -> 0)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_00_10_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 4,
+      "n_unique_all": 4,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "x",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "y OR x",
+        "x OR (x AND y) OR (y AND x)",
+        "(x OR y) AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (y AND x)",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "y OR x",
+        "x OR (x AND y) OR (y AND x)",
+        "(x OR y) AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (y AND x)",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "y OR x"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "y OR x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5840,
+        "completion_tokens": 90,
+        "total_tokens": 5930
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: y OR x"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y) OR (y AND x)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "y OR x"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_101",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 3,
+      "n_unique_valid": 3,
+      "n_unique_all": 5,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.3,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "(x OR y) AND (x OR y)",
+        "y",
+        "x OR y",
+        "x AND y",
+        "x OR y",
+        "x AND y OR y",
+        "x OR y",
+        "x AND y",
+        "y AND (x OR y)",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x AND y OR y",
+        "y AND (x OR y)"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x AND y OR y",
+        "y AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "(x OR y) AND (x OR y)",
+        "y",
+        "x AND y",
+        "x AND y OR y",
+        "y AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5838,
+        "completion_tokens": 812,
+        "total_tokens": 6650
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Let\u2019s reason through the observations:\n\n1. (x=0, y=1) \u2192 1  \n2. (x=1, y=0) \u2192 0  \n3. (x=1, y=1) \u2192 1  \n\nWe need an expression using only AND, OR with x and y.\n\nObservation 2 says if x=1 and y=0, output must be 0.  \nThis means the expression must be 0 when y=0 (and x=1).  \n\nObservation 1 says when x=0 and y=1, output is 1, so the expression must be 1 when y=1 (and x=0).  \n\nObservation 3 says when both are 1, output is 1.\n\nThe simplest expression matching all three is **y**.  \n- When y=1, output is 1 (covers obs 1 and 3).  \n- When y=0, output is 0 (covers obs 2, since x=1, y=0 \u2192 0).  \n\nCheck constraints:  \n- Uses only x, y (only y here, allowed).  \n- Only AND/OR (none needed).  \n- No constants.  \n- Depth \u2264 2.  \n\nExpression: y  \n\nBut wait \u2014 the problem says \"use ONLY the variables: x, y\". Using only y might be allowed, but to avoid potential rejection for not using x, I can also give an equivalent form like (x AND y) OR y, but that simplifies to y (idempotence/absorption not allowed for normalization, but it\u2019s still logically equivalent \u2014 however they said no absorption normalization, so structure matters). But logically, (x AND y) OR y is valid and uses both variables.\n\nLet\u2019s check (x AND y) OR y:  \n- (0,1): (0) OR 1 = 1 \u2705  \n- (1,0): (0) OR 0 = 0 \u2705  \n- (1,1): (1) OR 1 = 1 \u2705  \n\nThis uses both variables and only AND/OR, depth 2.  \n\nExpression: (x AND y) OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND y OR y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Let me check the observations:\n\n- (0,1) \u2192 1\n- (1,0) \u2192 0\n- (1,1) \u2192 1\n\nWe need an expression consistent with all three.\n\nPrior expressions: `y` works for (0,1)=1 and (1,1)=1 but fails (1,0)=0? Actually `y` gives (1,0)=0, so `y` works for all three. But it's already given, so avoid repeating.\n\n`x AND y OR y` simplifies (without absorption normalization) but structurally it's given.\n\nLet me try `x OR y`:\n- (0,1) \u2192 1 \u2713\n- (1,0) \u2192 1 \u2717 (needs 0)\n\nTry `y AND (x OR y)`? That's like y... structurally different from prior given? Prior had `x AND y OR y`. `y AND (x OR y)` is different structure.\n\nCheck `y AND (x OR y)`:\n- (0,1): y=1, (0 OR 1)=1 \u2192 1 \u2713\n- (1,0): y=0 \u2192 0 \u2713\n- (1,1): y=1, (1 OR 1)=1 \u2192 1 \u2713\n\nWorks. Depth: 2 levels nesting. Uses only x, y, AND, OR. No constants. Different structure from priors.\n\nExpression: y AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "x AND y OR y",
+        "y AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n1_inputs_11_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 10,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 8,
+      "n_unique_all": 8,
+      "n_recovered_gts": 8,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.8,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "x OR y",
+        "x AND y",
+        "x OR (x AND y)",
+        "x",
+        "(x OR y) AND y",
+        "y",
+        "(x OR y) AND x",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x AND y",
+        "x OR (x AND y)",
+        "x",
+        "(x OR y) AND y",
+        "y",
+        "(x OR y) AND x",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x OR y)"
+      ],
+      "unique_valid_expressions": [
+        "x OR y",
+        "x AND y",
+        "x OR (x AND y)",
+        "x",
+        "(x OR y) AND y",
+        "y",
+        "(x OR y) AND x",
+        "(x OR y) AND (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "x AND y",
+        "x OR (x AND y)",
+        "x",
+        "(x OR y) AND y",
+        "y",
+        "(x OR y) AND x",
+        "(x OR y) AND (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5827,
+        "completion_tokens": 82,
+        "total_tokens": 5909
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x OR y",
+        "x AND y",
+        "x OR (x AND y)",
+        "x",
+        "(x OR y) AND y",
+        "y",
+        "(x OR y) AND x",
+        "(x OR y) AND (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_10",
+      "n_observations": 2,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 2,
+      "n_unique_valid": 2,
+      "n_unique_all": 4,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.2,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.6666666666666666,
+      "all_hypotheses": [
+        "x OR y",
+        "x AND y",
+        "y",
+        "x OR y",
+        "x AND y",
+        "x OR y",
+        "x AND y",
+        "y OR (x AND y)",
+        "x AND y",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y OR (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "y OR (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "x AND y",
+        "y",
+        "y OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5691,
+        "completion_tokens": 52,
+        "total_tokens": 5743
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: y OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "y OR (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 3,
+      "n_unique_all": 3,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x OR (x AND y)",
+        "(x OR y) AND x",
+        "x",
+        "x AND (y OR x)",
+        "x OR (x AND y)",
+        "x AND (y OR x)",
+        "(x OR y) AND x",
+        "x AND (y OR x)"
+      ],
+      "valid_hypotheses": [
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x OR (x AND y)",
+        "(x OR y) AND x",
+        "x",
+        "x AND (y OR x)",
+        "x OR (x AND y)",
+        "x AND (y OR x)",
+        "(x OR y) AND x",
+        "x AND (y OR x)"
+      ],
+      "unique_valid_expressions": [
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5783,
+        "completion_tokens": 84,
+        "total_tokens": 5867
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n1_inputs_00_outputs_0",
+      "n_observations": 1,
+      "n_ground_truths": 10,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 4,
+      "n_unique_all": 4,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x AND (x OR y) OR y",
+        "x AND (y OR x)",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND x",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR x"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x AND (y OR x)",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND x",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR x"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5717,
+        "completion_tokens": 92,
+        "total_tokens": 5809
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 6,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.7,
+      "valid_rate": 0.6,
+      "novelty_rate": 0.3,
+      "recovery_rate": 0.6666666666666666,
+      "all_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y) OR x",
+        "x AND (x OR y)",
+        "x AND (x OR y) OR x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y) OR x",
+        "x AND (y OR x)"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x AND (x OR y)",
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5824,
+        "completion_tokens": 88,
+        "total_tokens": 5912
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) OR x"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) OR x AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) OR x"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "x AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 1)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_00_10_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 2,
+      "n_unique_valid": 1,
+      "n_unique_all": 3,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.2,
+      "novelty_rate": 0.3,
+      "recovery_rate": 0.2,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND x",
+        "x AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND x"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5689,
+        "completion_tokens": 78,
+        "total_tokens": 5767
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND x"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_10_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 3,
+      "n_unique_all": 3,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.3,
+      "recovery_rate": 0.6,
+      "all_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR (x AND y) AND y",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR (y AND x)",
+        "x OR (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR (x AND y) AND y",
+        "(x OR y) AND x",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR (y AND x)",
+        "x OR (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5910,
+        "completion_tokens": 86,
+        "total_tokens": 5996
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y) AND y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "x AND (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0001",
+      "n_observations": 4,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x AND y",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y) AND (x OR y)",
+        "(x OR y) AND (x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y) AND (x OR y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y)",
+        "x AND (x OR y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y) AND (x OR y)",
+        "(x OR y) AND (x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y) AND (x OR y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "(x OR y) AND (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "(x OR y) AND (x AND y)",
+        "x AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6015,
+        "completion_tokens": 136,
+        "total_tokens": 6151
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y) AND (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y) AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "(x OR y) AND (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 5,
+      "n_unique_valid": 2,
+      "n_unique_all": 4,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.4,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND (y OR x)",
+        "(x OR y) AND (x AND y)",
+        "x AND (x OR y)",
+        "x AND y AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (x OR y)",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND (x OR y) AND (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "(x OR y) AND (x AND y)",
+        "x AND y AND (x OR y)",
+        "x AND y",
+        "(x OR y) AND (x OR y) AND (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "(x OR y) AND (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x AND (y OR x)",
+        "(x OR y) AND (x AND y)",
+        "(x OR y) AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5778,
+        "completion_tokens": 102,
+        "total_tokens": 5880
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND y AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y) AND (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "(x OR y) AND (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_10_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "x OR y OR (x AND y)",
+        "x XOR y",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR x OR y",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "x OR y OR (x AND y)",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5765,
+        "completion_tokens": 86,
+        "total_tokens": 5851
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x XOR y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x OR y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression could not be parsed."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_00_01_outputs_00",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 4,
+      "n_unique_all": 6,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.6,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (x OR y) AND y",
+        "x AND (x OR y) AND y OR (x AND y)",
+        "x",
+        "y AND (x OR y)",
+        "x OR y",
+        "x AND (x OR y) AND (x OR x)",
+        "x AND (x OR y) AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (x OR y) AND y",
+        "x",
+        "x AND (x OR y) AND (x OR x)",
+        "x AND (x OR y) AND (x OR y)"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y) AND y",
+        "x"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y) AND y",
+        "x",
+        "y AND (x OR y)",
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5840,
+        "completion_tokens": 98,
+        "total_tokens": 5938
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) AND y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) AND y OR (x AND y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: y AND (x OR y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) AND (x OR x)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y) AND y",
+        "x"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 3,
+      "n_unique_all": 4,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.4,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR (x AND y) OR (y AND x)",
+        "(x OR y) AND x",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (x AND y) OR (y AND x)",
+        "x OR (y AND x)",
+        "(x OR y) AND (x AND y) OR x"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR (x AND y) OR (y AND x)",
+        "(x OR y) AND x",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (x AND y) OR (y AND x)",
+        "x OR (y AND x)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "(x OR y) AND x"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "(x OR y) AND x",
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5911,
+        "completion_tokens": 98,
+        "total_tokens": 6009
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y) OR (y AND x)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y) OR (y AND x)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x AND y) OR x"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "x OR (x AND y)",
+        "(x OR y) AND x"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n1_inputs_01_outputs_0",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 2,
+      "n_unique_all": 4,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "y",
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (y OR x)",
+        "x OR y",
+        "x AND (x OR y)",
+        "x AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (y OR x)",
+        "x AND (x OR y)",
+        "x AND (x OR y)"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "y",
+        "x AND (x OR y)",
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5609,
+        "completion_tokens": 72,
+        "total_tokens": 5681
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "x AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_01_10_11_outputs_111",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 5,
+      "n_unique_valid": 1,
+      "n_unique_all": 2,
+      "n_recovered_gts": 1,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.2,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x AND y) OR x",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "x OR y",
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5801,
+        "completion_tokens": 70,
+        "total_tokens": 5871
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x OR y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0101",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 6,
+      "n_unique_valid": 3,
+      "n_unique_all": 5,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.6,
+      "novelty_rate": 0.5,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y",
+        "y",
+        "y AND (x OR x)",
+        "x OR y",
+        "y",
+        "y AND (x OR y)",
+        "y OR (x AND y)",
+        "(x OR y) AND y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "y",
+        "y",
+        "y AND (x OR y)",
+        "y OR (x AND y)",
+        "(x OR y) AND y"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "y AND (x OR y)",
+        "y OR (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x OR y",
+        "y AND (x OR x)",
+        "y AND (x OR y)",
+        "y OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5938,
+        "completion_tokens": 60,
+        "total_tokens": 5998
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: y AND (x OR x)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: y AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: y OR (x AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND y"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "y AND (x OR y)",
+        "y OR (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_10_11_outputs_001",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 5,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.5,
+      "novelty_rate": 0.3,
+      "recovery_rate": 0.4,
+      "all_hypotheses": [
+        "x AND y",
+        "(x AND y) OR (x AND y AND x)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x AND y",
+        "(x OR y) AND y",
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (x OR y)"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "(x AND y) OR (x AND y AND x)",
+        "x AND y",
+        "(x OR y) AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "(x OR y) AND y"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x AND (x OR y)",
+        "(x OR y) AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5833,
+        "completion_tokens": 84,
+        "total_tokens": 5917
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x AND y AND x)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "(x OR y) AND y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=1, y=0) -> 0)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_00_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 10,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 5,
+      "n_unique_all": 5,
+      "n_recovered_gts": 5,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.5,
+      "recovery_rate": 0.5,
+      "all_hypotheses": [
+        "(x AND y) OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x AND y) OR x",
+        "(x OR y) AND y",
+        "x AND (x OR y)",
+        "(x AND y) OR x",
+        "(x OR y) AND (x OR y)",
+        "x AND y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "(x AND y) OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x AND y) OR x",
+        "(x OR y) AND y",
+        "x AND (x OR y)",
+        "(x AND y) OR x",
+        "(x OR y) AND (x OR y)",
+        "x AND y",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "(x AND y) OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x OR y) AND y",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "(x AND y) OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x OR y) AND y",
+        "x AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5948,
+        "completion_tokens": 86,
+        "total_tokens": 6034
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x AND y)"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        }
+      ],
+      "valid_unique_archive": [
+        "(x AND y) OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "(x OR y) AND y",
+        "x AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x OR y",
+        "x XOR y",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR (x OR y)",
+        "(x OR y) AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR (y AND x)",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "(x OR y) AND (x OR y)",
+        "(x AND y) OR (x OR y)",
+        "(x OR y) AND (x OR y)",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5837,
+        "completion_tokens": 90,
+        "total_tokens": 5927
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x XOR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression could not be parsed."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_11_outputs_011",
+      "n_observations": 3,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 4,
+      "n_unique_all": 4,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "x AND y OR y",
+        "x OR y",
+        "x OR y AND y",
+        "x OR y",
+        "x AND y OR x OR y",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y",
+        "(x OR y) AND (x OR y)",
+        "x AND y OR y",
+        "x OR y",
+        "x OR y AND y",
+        "x OR y",
+        "x AND y OR x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x OR y",
+        "x AND y OR y",
+        "x AND y OR x OR y"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x OR y",
+        "x AND y OR y",
+        "x AND y OR x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5879,
+        "completion_tokens": 64,
+        "total_tokens": 5943
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND y OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR y AND y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND y OR x OR y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "x OR y",
+        "x AND y OR y",
+        "x AND y OR x OR y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_10_11_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 10,
+      "n_unique_valid": 4,
+      "n_unique_all": 4,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 1.0,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)",
+        "y OR x",
+        "x AND (x OR y)",
+        "(x OR y) AND x",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x OR (y AND x)"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)",
+        "y OR x",
+        "x AND (x OR y)",
+        "(x OR y) AND x",
+        "x AND (x OR y)",
+        "x AND (x OR y)",
+        "x OR (y AND x)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5829,
+        "completion_tokens": 76,
+        "total_tokens": 5905
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: y OR x"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_11_outputs_11",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 4,
+      "n_unique_all": 5,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.5,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "(x AND y) OR y",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "(x AND y) OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "(x AND y) OR y"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR y OR (x AND y)",
+        "(x AND y) OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5791,
+        "completion_tokens": 70,
+        "total_tokens": 5861
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR y OR (x AND y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "(x AND y) OR y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_010",
+      "n_observations": 3,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 3,
+      "n_unique_valid": 2,
+      "n_unique_all": 4,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.3,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.6666666666666666,
+      "all_hypotheses": [
+        "y AND (x OR y)",
+        "y",
+        "x OR y",
+        "y",
+        "x OR y",
+        "x AND y",
+        "x OR y",
+        "x AND y",
+        "x OR y",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "y AND (x OR y)",
+        "y",
+        "y"
+      ],
+      "unique_valid_expressions": [
+        "y AND (x OR y)",
+        "y"
+      ],
+      "unique_all_expressions": [
+        "y AND (x OR y)",
+        "y",
+        "x OR y",
+        "x AND y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5870,
+        "completion_tokens": 50,
+        "total_tokens": 5920
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: y AND (x OR y)"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        }
+      ],
+      "valid_unique_archive": [
+        "y AND (x OR y)",
+        "y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0111",
+      "n_observations": 4,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 6,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.6,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "(x AND y) OR (x OR y)",
+        "(x AND y) OR x OR y",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "(x AND y) OR (x OR y)",
+        "(x AND y) OR x OR y",
+        "x OR y",
+        "x OR y"
+      ],
+      "unique_valid_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x OR y",
+        "(x AND y) OR (x OR y)",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6027,
+        "completion_tokens": 88,
+        "total_tokens": 6115
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x OR y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x OR y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR x OR y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x OR y",
+        "(x AND y) OR (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n1_inputs_01_outputs_1",
+      "n_observations": 1,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 4,
+      "n_unique_all": 5,
+      "n_recovered_gts": 4,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.5,
+      "recovery_rate": 0.8,
+      "all_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x OR (y AND x)",
+        "x OR y",
+        "x OR (x AND y)",
+        "x OR y OR (x AND y)",
+        "x AND y OR y",
+        "x OR y OR (x AND y) OR (x AND y AND y)",
+        "y OR (x AND y)"
+      ],
+      "valid_hypotheses": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x AND y OR y",
+        "x OR y OR (x AND y) OR (x AND y AND y)",
+        "y OR (x AND y)"
+      ],
+      "unique_valid_expressions": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x AND y OR y"
+      ],
+      "unique_all_expressions": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x OR (y AND x)",
+        "x AND y OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5690,
+        "completion_tokens": 88,
+        "total_tokens": 5778
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR y OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR y OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x AND y OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR y OR (x AND y) OR (x AND y AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: y OR (x AND y)"
+        }
+      ],
+      "valid_unique_archive": [
+        "y",
+        "x OR y",
+        "x OR y OR (x AND y)",
+        "x AND y OR y"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 1)."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n2_inputs_01_11_outputs_01",
+      "n_observations": 2,
+      "n_ground_truths": 5,
+      "n_queries": 10,
+      "n_valid": 7,
+      "n_unique_valid": 3,
+      "n_unique_all": 4,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.7,
+      "novelty_rate": 0.4,
+      "recovery_rate": 0.6,
+      "all_hypotheses": [
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (x OR y) OR (x AND y)",
+        "x AND (y OR x)",
+        "x OR y",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x OR y",
+        "x AND (x OR y)",
+        "x AND (y OR x)"
+      ],
+      "valid_hypotheses": [
+        "x AND (x OR y)",
+        "x AND y",
+        "x AND (y OR x)",
+        "x AND (x OR y)",
+        "x OR (x AND y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)"
+      ],
+      "unique_valid_expressions": [
+        "x AND (x OR y)",
+        "x AND y",
+        "x OR (x AND y)"
+      ],
+      "unique_all_expressions": [
+        "x AND (x OR y)",
+        "x AND y",
+        "x OR y",
+        "x OR (x AND y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5776,
+        "completion_tokens": 84,
+        "total_tokens": 5860
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y) OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND (x OR y)",
+        "x AND y",
+        "x OR (x AND y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 1 ((x=0, y=1) -> 0)."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n3_inputs_00_01_10_outputs_000",
+      "n_observations": 3,
+      "n_ground_truths": 2,
+      "n_queries": 10,
+      "n_valid": 8,
+      "n_unique_valid": 2,
+      "n_unique_all": 3,
+      "n_recovered_gts": 2,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 0.9,
+      "valid_rate": 0.8,
+      "novelty_rate": 0.3,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x AND y",
+        "x AND (y OR x)",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND x AND y",
+        "x AND y AND (x OR y)",
+        "(x AND y) OR (x AND y)",
+        "x AND y AND (x OR y) OR (x AND y)",
+        "x AND y"
+      ],
+      "valid_hypotheses": [
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND y",
+        "x AND x AND y",
+        "x AND y AND (x OR y)",
+        "(x AND y) OR (x AND y)",
+        "x AND y"
+      ],
+      "unique_valid_expressions": [
+        "x AND y",
+        "x AND y AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x AND y",
+        "x AND (y OR x)",
+        "x AND y AND (x OR y)"
+      ],
+      "token_usage": {
+        "prompt_tokens": 5817,
+        "completion_tokens": 82,
+        "total_tokens": 5899
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND x AND y"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: x AND y AND (x OR y)"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: (x AND y) OR (x AND y)"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x AND y AND (x OR y) OR (x AND y)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x AND y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x AND y",
+        "x AND y AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 3 ((x=1, y=0) -> 0)."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The expression exceeds the maximum depth of 2."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        }
+      ]
+    },
+    {
+      "observation_set_id": "n4_inputs_00_01_10_11_outputs_0011",
+      "n_observations": 4,
+      "n_ground_truths": 3,
+      "n_queries": 10,
+      "n_valid": 9,
+      "n_unique_valid": 3,
+      "n_unique_all": 4,
+      "n_recovered_gts": 3,
+      "parse_success_rate": 1.0,
+      "in_space_rate": 1.0,
+      "valid_rate": 0.9,
+      "novelty_rate": 0.4,
+      "recovery_rate": 1.0,
+      "all_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (x OR y)",
+        "(x OR y) AND x",
+        "(x OR y) AND x",
+        "x OR (y AND x)",
+        "x OR y"
+      ],
+      "valid_hypotheses": [
+        "x",
+        "x OR (x AND y)",
+        "x OR (x AND y)",
+        "x AND (x OR y)",
+        "x AND (y OR x)",
+        "x AND (x OR y)",
+        "(x OR y) AND x",
+        "(x OR y) AND x",
+        "x OR (y AND x)"
+      ],
+      "unique_valid_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "x AND (x OR y)"
+      ],
+      "unique_all_expressions": [
+        "x",
+        "x OR (x AND y)",
+        "x AND (x OR y)",
+        "x OR y"
+      ],
+      "token_usage": {
+        "prompt_tokens": 6021,
+        "completion_tokens": 80,
+        "total_tokens": 6101
+      },
+      "cost": 0.0,
+      "errors": [],
+      "error_summary": {
+        "total_errors": 0,
+        "error_types": {}
+      },
+      "raw_responses": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "response": "Expression: x"
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "response": "Expression: x OR (x AND y)"
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "response": "Expression: x AND (y OR x)"
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "response": "Expression: x AND (x OR y)"
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "response": "Expression: (x OR y) AND x"
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "response": "Expression: x OR (y AND x)"
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "response": "Expression: x OR y"
+        }
+      ],
+      "valid_unique_archive": [
+        "x",
+        "x OR (x AND y)",
+        "x AND (x OR y)"
+      ],
+      "feedback_history": [
+        {
+          "query_index": 0,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 1,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 2,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 3,
+          "attempt": 1,
+          "feedback": "The candidate passed all visible checks and was added to the valid, structurally unique archive. Try another structurally different candidate."
+        },
+        {
+          "query_index": 4,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 5,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 6,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 7,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 8,
+          "attempt": 1,
+          "feedback": "The candidate is valid but structurally duplicates an already archived candidate. Try a different structure."
+        },
+        {
+          "query_index": 9,
+          "attempt": 1,
+          "feedback": "The expression does not match observation 2 ((x=0, y=1) -> 0)."
+        }
+      ]
+    }
+  ],
+  "method": "improved",
+  "method_details": "Only valid, in-space, structurally unique candidates are fed back; candidate diagnostics use visible observations and constraints only.",
+  "run_complete": true
+}
