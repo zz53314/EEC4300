@@ -52,8 +52,8 @@ The table reports the macro-average over three seeds. These values are not recom
 |---|---:|---:|---:|
 | Baseline | 93.78% | 17.67% | 42.33% |
 | Improved 1 | 68.56% (−25.22 pp) | **40.33% (+22.67 pp)** | 74.67% (+32.33 pp) |
-| Improved 2 | **80.33% (−13.44 pp)** | 37.89% (+20.22 pp) | **75.96% (+33.63 pp)** |
-| Improved 3 | 81.00% (−12.78 pp) | 36.56% (+18.89 pp) | 73.81% (+31.48 pp) |
+| Improved 2 | 80.33% (−13.44 pp) | 37.89% (+20.22 pp) | **75.96% (+33.63 pp)** |
+| Improved 3 | **81.00% (−12.78 pp)** | 36.56% (+18.89 pp) | 73.81% (+31.48 pp) |
 
 **Interpretation:** The baseline has the highest validity but repeatedly generates the same answers, resulting in low novelty and recovery. All three improved methods substantially increase novelty and recovery, while validity decreases. This indicates a correctness–diversity tradeoff when the model is explicitly encouraged to explore alternative structures.
 
