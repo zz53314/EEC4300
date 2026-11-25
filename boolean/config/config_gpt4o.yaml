@@ -1,0 +1,17 @@
+llm:
+  type: openai
+  models:
+    openrouter: "openai/gpt-4o"
+    openai: "deepseek-chat"
+    anthropic: Null
+  base_url: "https://api.deepseek.com"
+  api_keys:
+    openrouter: ""
+    openai: ""
+    anthropic: ""
+  temperature: 0.7
+
+benchmark:
+  checkpoint: "checkpoints"
+  verbose: true
+  output_pattern: "results/{dataset_name}_{model}.json"
